@@ -1,0 +1,48 @@
+.button {
+  cursor: pointer;
+  padding: 0.75em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+
+  border: none;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+
+  outline: none;
+  text-transform: capitalize;
+}
+
+.transparent {
+  color: var(--text-clr);
+  background-color: transparent;
+}
+
+.primary {
+  background-color: var(--primary-400);
+  color: var(--white);
+}
+.primary:hover {
+  background-color: var(--primary-300);
+}
+
+.danger {
+  background-color: var(--danger-400);
+  color: var(--white);
+}
+
+.danger:hover {
+  background-color: var(--danger-300);
+}
+
+.default {
+  background-color: var(--btn-default);
+  color: var(--btn-default-color);
+  border: 1px solid var(--lines);
+}
+
+.default:hover {
+  background-color: var(--btn-default-hover);
+}

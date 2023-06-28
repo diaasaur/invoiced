@@ -1,0 +1,52 @@
+/* import font */
+@font-face {
+  font-family: 'League Spartan';
+  src: url('./../fonts/LeagueSpartan-VariableFont_wght.ttf')
+    format('truetype-variations');
+  font-weight: 100 900;
+}
+
+.text-xl {
+  font-weight: 700;
+  font-size: 2.25rem; /* 36px / 16px */
+  line-height: 2rem; /* 33px / 16px */
+  letter-spacing: -0.0625rem; /* -1px / 16px */
+}
+.text-lg {
+  font-weight: 700;
+  font-size: 1.5rem; /* 24px / 16px */
+  line-height: 1.375rem; /* 22px / 16px */
+  letter-spacing: -0.046875rem; /* -0.75px / 16px */
+}
+.text-md {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.text-sm {
+  font-size: 0.9375rem; /* 15px / 16px */
+  line-height: 1.5rem; /* 24px / 16px */
+  letter-spacing: -0.015625rem; /* -0.25px / 16px */
+}
+.text-sm.compact {
+  line-height: 0.9375rem; /* 15px / 16px */
+}
+.text-xs {
+  font-size: 0.8125rem; /* 13px / 16px */
+  line-height: 1.125rem; /* 18px / 16px */
+  letter-spacing: -0.00625rem; /* -0.1px / 16px */
+}
+.text-xs.compact {
+  line-height: 0.9375rem; /* 15px / 16px */
+}
+.muted {
+  color: var(--muted-clr);
+}
+.muted.highlight {
+  color: var(--muted-highlight-clr);
+}
+.bold {
+  font-weight: 500;
+}
+.bolder {
+  font-weight: 700;
+}

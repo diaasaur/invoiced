@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  gap: 0.75em;
+  align-items: flex-end;
+}
+button {
+  all: unset;
+}
+
+.root,
+.label {
+  cursor: pointer;
+}
+
+.root {
+  background-color: var(--checkbox-clr);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+}
+.root:hover {
+  border: 1px solid var(--primary-400);
+}
+
+.root[data-state='checked'] {
+  background-color: var(--primary-400);
+}
+
+.label {
+  text-transform: capitalize;
+  line-height: normal;
+}

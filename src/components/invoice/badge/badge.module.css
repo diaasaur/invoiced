@@ -1,0 +1,21 @@
+.badge {
+  border-radius: 6px;
+  min-width: 104px;
+  padding: 0.75em;
+  text-transform: capitalize;
+  display: flex;
+  place-content: center;
+}
+
+.paid {
+  color: var(--badge-paid-text-clr);
+  background-color: var(--badge-paid-bg-clr);
+}
+.pending {
+  color: var(--badge-pending-text-clr);
+  background-color: var(--badge-pending-bg-clr);
+}
+.draft {
+  color: var(--badge-draft-text-clr);
+  background-color: var(--badge-draft-bg-clr);
+}

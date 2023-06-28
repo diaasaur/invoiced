@@ -1,0 +1,85 @@
+:root {
+  --primary-300: #9277ff;
+  --primary-400: #7c5dfa;
+
+  --white: #ffffff;
+  --neutral-50: #f9fafe;
+  --neutral-100: #f8f8fb;
+  --neutral-200: #dfe3fa;
+  --neutral-300: #888eaf;
+  --neutral-400: #888eb0;
+  --neutral-500: #7e88c3;
+  --neutral-600: #373b53;
+  --neutral-700: #1e2139;
+  --neutral-800: #252945;
+  --neutral-850: #141624;
+  --neutral-900: #0c0e16;
+
+  --danger-300: #ff9797;
+  --danger-400: #ec5757;
+
+  --green-100: rgba(51, 214, 159, 0.1);
+  --green-400: #33d69f;
+  --orange-100: rgba(255, 143, 0, 0.1);
+  --orange-400: #ff8f00;
+
+  --neutral-200-opacity: rgba(223, 227, 250, 0.1);
+  --neutral-800-opacity: rgba(55, 59, 83, 0.1);
+
+  /* badge colors */
+  --badge-paid-text-clr: var(--green-400);
+  --badge-paid-bg-clr: var(--green-100);
+  --badge-pending-text-clr: var(--orange-400);
+  --badge-pending-bg-clr: var(--orange-100);
+}
+
+html[data-theme='light'] {
+  --bg-clr: var(--neutral-100);
+  --lines-clr: var(--neutral-200);
+  --nav-clr: var(--neutral-600);
+  --text-clr: var(--neutral-900);
+  --muted-highlight-clr: var(--neutral-500);
+  --muted-clr: var(--neutral-400);
+  --input-clr: var(--white);
+  --dropdown-clr: var(--white);
+  --card-clr: var(--white);
+  --band-clr: var(--neutral-600);
+
+  --badge-draft-text-clr: var(--neutral-600);
+  --badge-draft-bg-clr: var(--neutral-800-opacity);
+  --box-shadow-sm: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  --box-shadow-md: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  --box-shadow-lg: 0 -10px 60px 0 rgba(72, 84, 159, 0.25);
+
+  --checkbox-clr: var(--neutral-200);
+
+  --btn-default: var(--neutral-50);
+  --btn-default-color: var(--neutral-500);
+  --btn-default-hover: var(--neutral-200);
+}
+
+html[data-theme='dark'] {
+  --bg-clr: var(--neutral-850);
+  --lines-clr: var(--neutral-800);
+  --nav-clr: var(--neutral-800);
+  --text-clr: var(--white);
+  --muted-clr: var(--neutral-200);
+  --muted-highlight-clr: var(--neutral-400);
+
+  --input-clr: var(--neutral-700);
+  --dropdown-clr: var(--neutral-800);
+  --card-clr: var(--neutral-700);
+  --band-clr: var(--neutral-900);
+
+  --badge-draft-text-clr: var(--neutral-200);
+  --badge-draft-bg-clr: var(--neutral-200-opacity);
+  --box-shadow-sm: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  --box-shadow-md: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  --box-shadow-lg: 0 -10px 60px 0 rgba(0, 0, 0, 0.25);
+
+  --checkbox-clr: var(--neutral-850);
+
+  --btn-default: var(--nav-clr);
+  --btn-default-color: var(--muted-clr);
+  --btn-default-hover: var(--muted-highlight-clr);
+}

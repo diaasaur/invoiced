@@ -1,0 +1,47 @@
+.content {
+  background: var(--dropdown-clr);
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  min-width: 190px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-md);
+  animation-duration: 0.25s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.content[data-side='top'] {
+  animation-name: slideUp;
+}
+.content[data-side='bottom'] {
+  animation-name: slideDown;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon {
+  transition: transform 0.1s linear;
+}
+.icon.open {
+  transform: rotate(-180deg);
+}

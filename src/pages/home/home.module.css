@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2em;
+}
+.invoices {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

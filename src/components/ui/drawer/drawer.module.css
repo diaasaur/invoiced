@@ -1,0 +1,27 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  top: calc(var(--nav-size));
+  background-color: rgba(0, 0, 0, 0.49);
+}
+.drawer {
+  background-color: var(--bg-clr);
+  color: var(--color);
+  border-radius: 0 var(--nav-br) var(--nav-br) 0;
+  height: 100%;
+  font-size: 3rem;
+  overflow: scroll;
+  padding: 0.5em;
+  box-shadow: var(--box-shadow-md);
+}
+
+@media (--screen-lg-min) {
+  .overlay {
+    top: 0;
+    left: calc(var(--nav-size) - var(--nav-br));
+  }
+  .drawer {
+    padding-left: calc(var(--nav-br) + 0.5em);
+    width: 60%;
+  }
+}

@@ -1,0 +1,46 @@
+@import url('./assets/css/reset.css');
+@import url('./assets/css/fonts.css');
+@import url('./assets/css/colors.css');
+
+:root {
+  --nav-size: 80px; /* sm screen nav size */
+  --nav-br: 20px; /* nav border-radius */
+}
+
+@media (--screen-lg-min) {
+  :root {
+    --nav-size: 100px;
+  }
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+  background-color: var(--bg-clr);
+  color: var(--text-clr);
+
+  transition: background 0.2s ease-in;
+}
+
+/* change default outline to violet */
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: none;
+  box-shadow: none;
+  outline: 2px dashed var(--primary-300);
+}
+
+::selection {
+  background: rgba(146, 119, 255, 0.35);
+}
+/* utility classes */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

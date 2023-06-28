@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--nav-clr);
+  height: var(--nav-size);
+  z-index: 1;
+  color: var(--white);
+  /* TODO: hacky escape hatch to fix radix ui's dialog adding pointer-events: none on body */
+  /* explore why modal=false not working */
+  pointer-events: all !important;
+}
+.main {
+  padding: calc(var(--nav-size) + 3em) 1.5em 2em 1.5em;
+  display: grid;
+  grid-template-columns: minmax(auto, 730px);
+  justify-content: center;
+}
+
+@media (--screen-lg-min) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-size);
+    height: 100%;
+    border-radius: 0 var(--nav-br) var(--nav-br) 0;
+  }
+
+  .main {
+    padding: 4em 1.5em 3em calc(var(--nav-size) + 1.5em);
+  }
+}

@@ -1,0 +1,15 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding: 2em 0;
+  gap: 1em;
+}
+.subtitle {
+  max-width: 15rem;
+  text-align: center;
+}
+
+.subtitle span {
+  font-weight: bold;
+}
