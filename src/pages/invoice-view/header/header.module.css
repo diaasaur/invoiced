@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+@media (--screen-sm-max) {
+  .status {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  .header {
+    padding: 1.5em 2em;
+  }
+}

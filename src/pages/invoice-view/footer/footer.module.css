@@ -1,0 +1,13 @@
+.footer {
+  padding: 1em 1.5em;
+  position: fixed;
+  bottom: -5px;
+  width: 100%;
+  left: 0;
+  box-shadow: var(--box-shadow-lg);
+  height: calc(var(--buttons-height) + 5px);
+}
+.buttons {
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,19 @@
+.invoice {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+@media (--screen-md-min) {
+  .invoice {
+    padding: 2.5em;
+  }
+}
+
+@media (--screen-sm-min) {
+  .container {
+    --buttons-height: 90px;
+    margin-bottom: var(--buttons-height);
+  }
+}

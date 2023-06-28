@@ -1,0 +1,56 @@
+.container {
+  --padding: 2em;
+  --border-radius: 8px;
+}
+
+.items {
+  padding: var(--padding);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  padding-bottom: 0;
+  width: 100%;
+  background-color: var(--btn-default);
+  border: 0.25px solid var(--lines-clr);
+  padding-top: calc(var(--padding) * 0.75);
+}
+
+th {
+  font-weight: 500;
+}
+
+th,
+tbody td {
+  padding-bottom: 1.5em;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  text-align: start;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  text-align: center;
+}
+
+th:nth-child(3),
+td:nth-child(3),
+th:nth-child(4),
+td:nth-child(4) {
+  text-align: end;
+}
+
+.band {
+  background-color: var(--band-clr);
+  padding: var(--padding);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+@media (--screen-sm-max) {
+  td:nth-child(2) {
+    text-align: end;
+  }
+}
