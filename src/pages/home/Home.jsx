@@ -15,9 +15,9 @@ export default function Home() {
       <Header total={invoices.length} />
       {invoices.length ? (
         <ul className={styles.invoices}>
-          {invoices.map(invoice => (
-            <InvoicePreview key={invoice.id} {...invoice} />
-          ))}
+          {invoices.map(invoice => {
+            return <InvoicePreview key={invoice.id} {...invoice} />;
+          })}
         </ul>
       ) : (
         <NoInvoices />

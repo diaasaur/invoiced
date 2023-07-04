@@ -1,8 +1,7 @@
 import InvoiceFilter from '../../../components/invoice/invoice-filter/InvoiceFilter';
 import InvoiceForm from '../../../components/invoice/invoice-form/InvoiceForm';
-import Button from '../../../components/ui/button/Button';
-import Drawer from '../../../components/ui/drawer/Drawer';
 import { useApp } from '../../../stores/useApp';
+import { FormModes } from '../../../utils/constants';
 import styles from './header.module.css';
 
 export default function Header({ total }) {
@@ -18,19 +17,7 @@ export default function Header({ total }) {
       </div>
       <div className={styles.buttons}>
         <InvoiceFilter />
-        <Drawer>
-          <Drawer.Trigger>
-            <Button variant="primary">
-              +{' '}
-              <p className="text-sm bolder">
-                {isSmallScreen ? 'New' : 'New Invoice'}
-              </p>
-            </Button>
-          </Drawer.Trigger>
-          <Drawer.Content>
-            <InvoiceForm />
-          </Drawer.Content>
-        </Drawer>
+        <InvoiceForm mode={FormModes.CREATE} />
       </div>
     </div>
   );

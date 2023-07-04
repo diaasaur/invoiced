@@ -13,29 +13,29 @@
   padding-top: calc(var(--padding) * 0.75);
 }
 
-th {
+.container th {
   font-weight: 500;
 }
 
-th,
+.container th,
 tbody td {
   padding-bottom: 1.5em;
 }
 
-th:nth-child(1),
-td:nth-child(1) {
+.container th:nth-child(1),
+.container td:nth-child(1) {
   text-align: start;
 }
 
-th:nth-child(2),
-td:nth-child(2) {
+.container th:nth-child(2),
+.container td:nth-child(2) {
   text-align: center;
 }
 
-th:nth-child(3),
-td:nth-child(3),
-th:nth-child(4),
-td:nth-child(4) {
+.container th:nth-child(3),
+.container td:nth-child(3),
+.container th:nth-child(4),
+.container td:nth-child(4) {
   text-align: end;
 }
 
@@ -50,7 +50,7 @@ td:nth-child(4) {
 }
 
 @media (--screen-sm-max) {
-  td:nth-child(2) {
+  .container td:nth-child(2) {
     text-align: end;
   }
 }

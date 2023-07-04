@@ -1,29 +1,32 @@
-import classNames from 'classnames';
-import { useState } from 'react';
-import arrowDown from './../../../assets/images/icon-arrow-down.svg';
-import styles from './dropdown.module.css';
-import Button from '../button/Button';
 import * as Popover from '@radix-ui/react-popover';
+import styles from './dropdown.module.css';
+import classNames from 'classnames';
 
-export default function Dropdown({ children, label: triggerLabel }) {
-  const [open, setOpen] = useState(false);
-
+export function Root({ children, ...rest }) {
   return (
-    <Popover.Root open={open} onOpenChange={setOpen} modal={false}>
-      <Popover.Trigger asChild>
-        <Button variant="transparent">
-          <p>{triggerLabel}</p>
-          <img
-            className={classNames(styles.icon, { [styles.open]: open })}
-            src={arrowDown}
-            alt="arrow down"
-            aria-hidden
-          />
-        </Button>
-      </Popover.Trigger>
-      <Popover.Portal>
-        <Popover.Content className={styles.content}>{children}</Popover.Content>
-      </Popover.Portal>
+    <Popover.Root modal={true} {...rest}>
+      {children}
     </Popover.Root>
+  );
+}
+
+export function Trigger({ children, ...rest }) {
+  return (
+    <Popover.Trigger asChild {...rest}>
+      {children}
+    </Popover.Trigger>
+  );
+}
+
+export function Content({ children, className, ...rest }) {
+  return (
+    <Popover.Portal>
+      <Popover.Content
+        className={classNames(styles.content, className)}
+        {...rest}
+      >
+        {children}
+      </Popover.Content>
+    </Popover.Portal>
   );
 }

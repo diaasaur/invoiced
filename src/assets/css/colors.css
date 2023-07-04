@@ -31,10 +31,15 @@
   --badge-paid-bg-clr: var(--green-100);
   --badge-pending-text-clr: var(--orange-400);
   --badge-pending-bg-clr: var(--orange-100);
+
+  /* dark btn color */
+  --dark-btn-clr: var(--neutral-600);
+  --dark-btn-hover: var(--neutral-700);
 }
 
 html[data-theme='light'] {
   --bg-clr: var(--neutral-100);
+  --drawer-clr: var(--white);
   --lines-clr: var(--neutral-200);
   --nav-clr: var(--neutral-600);
   --text-clr: var(--neutral-900);
@@ -51,6 +56,8 @@ html[data-theme='light'] {
   --box-shadow-md: 0px 10px 20px rgba(72, 84, 159, 0.25);
   --box-shadow-lg: 0 -10px 60px 0 rgba(72, 84, 159, 0.25);
 
+  --overlay-sm: rgba(0, 0, 0, 0.075);
+
   --checkbox-clr: var(--neutral-200);
 
   --btn-default: var(--neutral-50);
@@ -60,6 +67,7 @@ html[data-theme='light'] {
 
 html[data-theme='dark'] {
   --bg-clr: var(--neutral-850);
+  --drawer-clr: var(--neutral-850);
   --lines-clr: var(--neutral-800);
   --nav-clr: var(--neutral-800);
   --text-clr: var(--white);
@@ -76,6 +84,8 @@ html[data-theme='dark'] {
   --box-shadow-sm: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   --box-shadow-md: 0px 10px 20px rgba(0, 0, 0, 0.25);
   --box-shadow-lg: 0 -10px 60px 0 rgba(0, 0, 0, 0.25);
+
+  --overlay-sm: rgba(0, 0, 0, 0.25);
 
   --checkbox-clr: var(--neutral-850);
 

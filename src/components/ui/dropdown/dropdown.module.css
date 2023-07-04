@@ -38,10 +38,3 @@
     transform: translateY(0);
   }
 }
-
-.icon {
-  transition: transform 0.1s linear;
-}
-.icon.open {
-  transform: rotate(-180deg);
-}

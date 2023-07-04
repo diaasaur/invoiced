@@ -30,6 +30,9 @@ a:focus-visible {
   box-shadow: none;
   outline: 2px dashed var(--primary-300);
 }
+input:focus-visible {
+  outline: 1px solid var(--primary-300);
+}
 
 ::selection {
   background: rgba(146, 119, 255, 0.35);

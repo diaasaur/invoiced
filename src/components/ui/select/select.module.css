@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  width: 100%;
+}
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  background-color: var(--input-clr);
+  border: 1px solid var(--lines-clr);
+  padding: 0.75em 1em;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  font-size: 1rem;
+}
+.trigger:hover,
+.trigger:focus {
+  border: 1px solid var(--primary-300);
+}
+
+.content {
+  background: var(--dropdown-clr);
+  color: var(--text-clr);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-md);
+  width: var(--radix-select-trigger-width);
+  margin: 1em 0;
+}
+
+.option {
+  padding: 1em 1.5em;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  font-size: 0.9rem;
+}
+
+.option:focus-visible {
+  outline: none;
+}
+
+.option + .option {
+  border-top: 1px solid var(--checkbox-clr);
+}
+
+.option[data-highlighted] {
+  color: var(--primary-400);
+}
+
+/* .indicator {
+  position: absolute;
+  left: 0;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+} */

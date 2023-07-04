@@ -14,6 +14,7 @@
 
   outline: none;
   text-transform: capitalize;
+  position: relative;
 }
 
 .transparent {
@@ -25,25 +26,35 @@
   background-color: var(--primary-400);
   color: var(--white);
 }
-.primary:hover {
-  background-color: var(--primary-300);
-}
 
 .danger {
   background-color: var(--danger-400);
   color: var(--white);
 }
 
-.danger:hover {
-  background-color: var(--danger-300);
-}
-
 .default {
   background-color: var(--btn-default);
   color: var(--btn-default-color);
-  border: 1px solid var(--lines);
+  border: 1px solid var(--lines-clr);
 }
 
-.default:hover {
-  background-color: var(--btn-default-hover);
+.dark {
+  background-color: var(--dark-btn-clr);
+  color: var(--white);
+}
+
+@media (hover: hover) {
+  .primary:hover {
+    background-color: var(--primary-300);
+  }
+  .danger:hover {
+    background-color: var(--danger-300);
+  }
+
+  .default:hover {
+    background-color: var(--btn-default-hover);
+  }
+  .dark:hover {
+    background-color: var(--dark-btn-hover);
+  }
 }

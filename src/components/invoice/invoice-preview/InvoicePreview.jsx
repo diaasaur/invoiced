@@ -34,7 +34,7 @@ export default function InvoicePreview({
           {clientName}
         </p>
         <p className={classNames('text-md bolder', styles.money)}>
-          {total && `${formatMoney(total)}`}
+          {`${formatMoney(total || 0)}`}
         </p>
         <Badge variant={status} className={styles.status} />
         <img

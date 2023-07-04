@@ -81,6 +81,6 @@
 }
 @media (--screen-lg-min) {
   .invoice {
-    grid-template-columns: 7rem 10rem 1fr auto auto auto;
+    grid-template-columns: 7rem 9rem 1fr auto auto auto;
   }
 }

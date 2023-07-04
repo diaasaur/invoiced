@@ -11,3 +11,6 @@
   justify-content: space-between;
   align-items: center;
 }
+.buttons.showPaid {
+  justify-content: flex-end;
+}

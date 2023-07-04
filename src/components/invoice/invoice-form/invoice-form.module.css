@@ -1,0 +1,138 @@
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  overflow: hidden;
+
+  --padding: 1.5em;
+}
+
+.title {
+  padding: 1.75em var(--padding) 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.backlink {
+  padding: 0;
+  width: fit-content;
+}
+
+.form {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+  overflow: scroll;
+}
+
+.formContent {
+  overflow: scroll;
+  padding: 0 var(--padding) 1em;
+}
+
+.formButtons {
+  background-color: var(--drawer-clr);
+  box-shadow: var(--box-shadow-lg);
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5em 1em;
+  border-top-right-radius: var(--nav-br);
+  border-bottom-right-radius: var(--nav-br);
+  gap: 0.75em;
+}
+.formError {
+  color: var(--danger-400);
+}
+
+.form fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+.form fieldset + fieldset {
+  margin-top: 2em;
+}
+.form legend {
+  font-size: 1.1rem;
+  color: var(--primary-400);
+  font-weight: 700;
+  padding-bottom: 0.5em;
+}
+
+.threeCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 0.75em;
+  column-gap: 1em;
+}
+.threeCol > :nth-child(3) {
+  grid-column: 1/-1;
+}
+
+.dates {
+  display: flex;
+  gap: 1em;
+}
+
+.deleteIcon {
+  padding: 0.45em 0.6em;
+  transform: translateY(15%);
+}
+.deleteIcon svg:hover {
+  fill: var(--danger-400);
+}
+
+.invoiceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+.fourCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 40px;
+  column-gap: 0.75em;
+}
+.add {
+  margin-top: 0.5em;
+}
+
+@media (--screen-sm-max) {
+  .formButtons button {
+    font-size: 0.9375rem;
+    padding: 0.85em 0.95em;
+  }
+}
+
+@media (--screen-md-min) {
+  .container {
+    --padding: 2em;
+  }
+  .backlink {
+    display: none;
+  }
+}
+
+@media (--screen-lg-min) {
+  .threeCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .threeCol > :nth-child(3) {
+    grid-column: auto;
+  }
+
+  .invoiceItem {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 1em;
+  }
+  .fourCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    grid-template-rows: 1fr;
+    column-gap: 1em;
+  }
+}

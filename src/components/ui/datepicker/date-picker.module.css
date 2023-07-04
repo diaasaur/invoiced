@@ -1,0 +1,107 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  width: 100%;
+}
+
+.container.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.daypicker {
+  color: var(--text-clr);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.daypicker {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: transparent;
+  --rdp-background-color: transparent;
+  --rdp-accent-color-dark: transparent;
+  --rdp-background-color-dark: transparent;
+  --rdp-outline: 2px dashed var(--primary-300); /* Outline border for focused elements */
+  --rdp-outline-selected: none; /* Outline border for focused _and_ selected elements */
+
+  margin: 1em;
+}
+
+.daypicker .rdp-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 4px !important; */
+}
+
+.daypicker .rdp-day_outside {
+  opacity: 0.25;
+  color: var(--text-clr);
+}
+
+.today {
+  /* background-color: var(--overlay-sm);
+  border-radius: 4px; */
+}
+.selected {
+  color: var(--primary-400);
+  opacity: 1;
+}
+.today {
+  position: relative;
+}
+.today::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: var(--primary-400);
+}
+.caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0.25em 0.75em 1.5em 0.75em;
+}
+.left,
+.right {
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+.right {
+  margin-right: -0.5em;
+}
+.rdp-cell {
+  padding: 1em;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  background-color: var(--input-clr);
+  border: 1px solid var(--lines-clr);
+  padding: 0.75em 1em;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  font-size: 1rem;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+.button img {
+  padding-bottom: 0.35em;
+}
+
+.content {
+  margin: 1em 0;
+  padding: 0;
+}
