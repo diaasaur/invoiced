@@ -107,7 +107,13 @@ export default function InvoiceForm({ mode, invoiceId }) {
                   type="button"
                   className={styles.backlink}
                 >
-                  <img src={arrowLeft} alt="arrow left" aria-hidden />
+                  <img
+                    src={arrowLeft}
+                    alt="arrow left"
+                    aria-hidden
+                    width={7}
+                    height={10}
+                  />
                   <p className="text-sm bolder">Go back</p>
                 </Button>
               </Drawer.Close>
@@ -245,6 +251,7 @@ export default function InvoiceForm({ mode, invoiceId }) {
                       name="paymentTerms"
                       render={({ field: { onChange, value } }) => (
                         <Select
+                          placeholder="Select Payment Terms"
                           label="Payment Terms"
                           value={value}
                           onValueChange={value => {
@@ -335,6 +342,7 @@ export default function InvoiceForm({ mode, invoiceId }) {
                               disabled
                               label="Total"
                               type="number"
+                              name="total"
                               className={styles.total}
                               value={value}
                               onChange={e => {

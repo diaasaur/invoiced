@@ -27,8 +27,15 @@ export default function InvoiceView() {
 
   return (
     <div className={styles.container}>
+      <h1 className="sr-only">Expanded view of {invoice.id}</h1>
       <Link className={styles.backlink} to="/">
-        <img src={arrowLeft} alt="arrow left" aria-hidden />
+        <img
+          src={arrowLeft}
+          alt="arrow left"
+          aria-hidden
+          width={7}
+          height={10}
+        />
         <p className="text-md bolder">Go back</p>
       </Link>
       <Header

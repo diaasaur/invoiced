@@ -63,7 +63,11 @@ export default function InvoiceDetails({ invoice }) {
       <div className={styles.email}>
         <p className={labelClassName}>Sent To</p>
         <p className="text-md bolder">
-          <a href={`mailto:${invoice?.clientEmail}`}>{invoice?.clientEmail}</a>
+          {invoice?.clientEmail && (
+            <a href={`mailto:${invoice?.clientEmail}`} alt="">
+              {invoice?.clientEmail}
+            </a>
+          )}
         </p>
       </div>
     </section>

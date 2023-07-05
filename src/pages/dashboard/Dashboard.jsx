@@ -35,7 +35,13 @@ export default function Dashboard() {
     <section className={styles.container}>
       <div className="containerHeader">
         <Link className={styles.backlink} to="/">
-          <img src={arrowLeft} alt="arrow left" aria-hidden />
+          <img
+            src={arrowLeft}
+            alt="arrow left"
+            aria-hidden
+            width={7}
+            height={10}
+          />
           <p className="text-md bolder">Go back</p>
         </Link>
         <h1 className="text-xl">{new Date().getFullYear()} Reports</h1>

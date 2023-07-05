@@ -4,6 +4,7 @@
   border-radius: 8px;
   border: 1.1px solid transparent;
   transition: border 0.2s ease-in-out;
+  display: block;
 }
 .link:hover,
 .link:active {

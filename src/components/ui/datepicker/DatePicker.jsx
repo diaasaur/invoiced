@@ -48,7 +48,13 @@ export default function DatePicker({
             disabled={disabled}
           >
             {formatDate(selected)}
-            <img src={calendar} alt="Calendar Icon" aria-hidden />
+            <img
+              src={calendar}
+              alt="Calendar Icon"
+              aria-hidden
+              width={16}
+              height={16}
+            />
           </Button>
         </Dropdown.Trigger>
       </div>
@@ -85,7 +91,13 @@ function CustomCaption({ displayMonth }) {
         onClick={() => previousMonth && goToMonth(previousMonth)}
         aria-label="Go to Previous Month"
       >
-        <img src={arrowLeft} alt="arrow left" aria-hidden />
+        <img
+          src={arrowLeft}
+          alt="arrow left"
+          aria-hidden
+          width={7}
+          height={10}
+        />
       </Button>
       <p className="text-sm bolder">{format(displayMonth, 'MMM yyy')}</p>
       <Button
@@ -95,7 +107,13 @@ function CustomCaption({ displayMonth }) {
         onClick={() => nextMonth && goToMonth(nextMonth)}
         aria-label="Go to Previous Month"
       >
-        <img src={arrowRight} alt="arrow right" aria-hidden />
+        <img
+          src={arrowRight}
+          alt="arrow right"
+          aria-hidden
+          width={7}
+          height={10}
+        />
       </Button>
     </div>
   );

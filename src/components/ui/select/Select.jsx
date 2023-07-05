@@ -27,7 +27,13 @@ export default function _Select(
             {options[value]}
           </Select.Value>
           <Select.Icon className={styles.arrow}>
-            <img src={arrowDown} alt="arrow down" aria-hidden />
+            <img
+              src={arrowDown}
+              alt="arrow down"
+              aria-hidden
+              width={11}
+              height={7}
+            />
           </Select.Icon>
         </Select.Trigger>
       </div>

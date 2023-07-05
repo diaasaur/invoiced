@@ -16,7 +16,11 @@ export default function Home() {
       {invoices.length ? (
         <ul className={styles.invoices}>
           {invoices.map(invoice => {
-            return <InvoicePreview key={invoice.id} {...invoice} />;
+            return (
+              <li key={invoice.id}>
+                <InvoicePreview {...invoice} />
+              </li>
+            );
           })}
         </ul>
       ) : (

@@ -10,10 +10,12 @@ export default function InputField({
   errors,
   ...rest
 }) {
+  console.log(name);
   return (
     <Input
       label={label}
       type="text"
+      name={name}
       {...(register
         ? register(name, { required: requiredError, pattern, valueAsNumber })
         : {})}

@@ -18,7 +18,7 @@ export default function Checkbox({ checked = false, label, ...rest }) {
         {...rest}
       >
         <Indicator className={styles.indicator}>
-          <img src={icon} alt="check" />
+          <img src={icon} alt="check" width={10} height={8} />
         </Indicator>
       </Root>
       <label

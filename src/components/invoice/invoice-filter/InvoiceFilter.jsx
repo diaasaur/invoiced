@@ -22,6 +22,8 @@ export default function InvoiceFilter() {
             src={arrowDown}
             alt="arrow down"
             aria-hidden
+            width={11}
+            height={7}
           />
         </Button>
       </Dropdown.Trigger>

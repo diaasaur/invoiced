@@ -42,6 +42,8 @@ export default function InvoicePreview({
           src={arrowRight}
           alt="icon-right"
           aria-hidden
+          width={7}
+          height={10}
         />
       </Card>
     </Link>
