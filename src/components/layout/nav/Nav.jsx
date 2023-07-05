@@ -13,7 +13,7 @@ export default function Nav() {
       <ul className={styles.ul}>
         <li className={styles.li}>
           <Link to="/dashboard" className={styles.dashboard}>
-            <Button variant="transparent">
+            <Button variant="transparent" title="Dashboard">
               <img
                 src={dashboard}
                 alt="Dashboard Logo"
