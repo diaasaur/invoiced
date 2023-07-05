@@ -31,6 +31,7 @@
 .backlink {
   padding: 0;
   width: fit-content;
+  align-items: baseline;
 }
 
 .form {
