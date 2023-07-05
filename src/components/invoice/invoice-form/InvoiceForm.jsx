@@ -226,7 +226,16 @@ export default function InvoiceForm({ mode, invoiceId }) {
                         <DatePicker
                           label="Invoice Date"
                           value={value}
-                          onValueChange={onChange}
+                          onValueChange={value => {
+                            setValue(
+                              'paymentDue',
+                              addDays(
+                                new Date(value),
+                                getValues('paymentTerms')
+                              )
+                            );
+                            onChange(value);
+                          }}
                           disabled={isEditMode}
                         />
                       )}
