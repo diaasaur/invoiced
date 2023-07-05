@@ -9,6 +9,7 @@ import DatePicker from '../../ui/datepicker/DatePicker';
 import Input from '../../ui/input/Input';
 import Select from '../../ui/select/Select';
 import arrowLeft from './../../../assets/images/icon-arrow-left.svg';
+import plus from './../../../assets/images/icon-plus.svg';
 import * as Drawer from './../../ui/drawer/Drawer';
 import InputField from './InputField';
 import styles from './invoice-form.module.css';
@@ -92,8 +93,11 @@ export default function InvoiceForm({ mode, invoiceId }) {
         {isEditMode ? (
           <Button>Edit</Button>
         ) : (
-          <Button variant="primary">
-            + {isSmallScreen ? 'New' : 'New Invoice'}
+          <Button variant="primary" className={styles.newInvoiceBtn}>
+            <span aria-hidden className={styles.plus}>
+              <img src={plus} alt="plus icon" aria-hidden />
+            </span>
+            {isSmallScreen ? 'New' : 'New Invoice'}
           </Button>
         )}
       </Drawer.Trigger>

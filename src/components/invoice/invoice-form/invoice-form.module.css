@@ -7,6 +7,21 @@
   --padding: 1.5em;
 }
 
+/* trigger cta: new invoice */
+.newInvoiceBtn {
+  padding: 0 1em;
+  padding-left: 0.75em;
+}
+.plus {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 100vh;
+}
+
 .title {
   padding: 1.75em var(--padding) 1.5em;
   display: flex;
