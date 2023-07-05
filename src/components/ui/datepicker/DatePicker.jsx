@@ -52,8 +52,8 @@ export default function DatePicker({
               src={calendar}
               alt="Calendar Icon"
               aria-hidden
-              width={16}
-              height={16}
+              width={20}
+              height={25}
             />
           </Button>
         </Dropdown.Trigger>

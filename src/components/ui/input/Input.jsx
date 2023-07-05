@@ -6,7 +6,6 @@ export default function Input(
   { type, label, name, error, className, ...rest },
   ref
 ) {
-  console.log(name);
   const hasError = Boolean(error?.message);
   const errorId = `${name}Hint`;
 
