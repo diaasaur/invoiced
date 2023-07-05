@@ -3,7 +3,6 @@
   flex-direction: column;
   min-height: 100vh;
   min-height: 100dvh;
-  border: 1px solid lightcoral;
 }
 
 .header {

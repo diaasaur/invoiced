@@ -8,6 +8,8 @@ import styles from './dashboard.module.css';
 import classNames from 'classnames';
 import PieChart from '../../components/charts/PieChart';
 import LineChart from '../../components/charts/LineChart';
+import { Link } from 'react-router-dom';
+import arrowLeft from './../../assets/images/icon-arrow-left.svg';
 
 export default function Dashboard() {
   const theme = useApp(state => state.theme);
@@ -24,14 +26,20 @@ export default function Dashboard() {
   const pending = invoices
     .filter(invoice => invoice.status === Filters.PENDING)
     .reduce((sum, invoice) => sum + invoice.total, 0);
-  const average = total / invoicesCount;
+  const average = invoicesCount ? total / invoicesCount : 0;
 
   const pieChartData = getPieChartData(invoices);
   const lineChartData = getLineChartData(invoices);
 
   return (
     <section className={styles.container}>
-      <h1 className="text-xl">{new Date().getFullYear()} Reports</h1>
+      <div className="containerHeader">
+        <Link className={styles.backlink} to="/">
+          <img src={arrowLeft} alt="arrow left" aria-hidden />
+          <p className="text-md bolder">Go back</p>
+        </Link>
+        <h1 className="text-xl">{new Date().getFullYear()} Reports</h1>
+      </div>
       <div className={styles.dashboard}>
         <div className={styles.textInfo}>
           <article>
@@ -64,15 +72,21 @@ export default function Dashboard() {
             Invoice Status Breakdown
           </h2>
           <div className={styles.pieChart}>
-            <PieChart
-              data={pieChartData}
-              textColor={theme === Theme.DARK ? '#fff' : '#0c0e16'}
-            />
+            {invoicesCount ? (
+              <PieChart
+                data={pieChartData}
+                textColor={theme === Theme.DARK ? '#fff' : '#0c0e16'}
+              />
+            ) : (
+              <p className="text-sm muted">
+                Add an invoice to see status breakdown
+              </p>
+            )}
           </div>
         </Card>
         <Card className={styles.lineChartContainer}>
           <h2 className={classNames('text-sm muted', styles.chartTitle)}>
-            Invoice UwU
+            Invoice Total Trend
           </h2>
           <div className={styles.lineChart}>
             <LineChart

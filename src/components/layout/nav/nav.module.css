@@ -25,6 +25,10 @@
   border-radius: 50%;
 }
 
+.dashboard button {
+  padding: 1em;
+}
+
 @media (--screen-lg-min) {
   .nav {
     grid-template-columns: 1fr;

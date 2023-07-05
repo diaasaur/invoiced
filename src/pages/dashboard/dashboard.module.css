@@ -4,10 +4,20 @@
   gap: 1.5em;
 }
 
+.backlink {
+  text-decoration: none;
+  color: var(--text-clr);
+  display: flex;
+  gap: 0.75em;
+  align-items: baseline;
+  width: fit-content;
+  padding-bottom: 1em;
+}
+
 .dashboard {
   display: grid;
-  grid-template-columns: 0.75fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 2em;
 }
 
@@ -35,6 +45,7 @@
   width: 100%;
   height: 100%;
   position: relative;
+  border: 0.5px solid var(--lines-clr);
 }
 .chartTitle {
   font-weight: 400;
@@ -44,6 +55,9 @@
   inset: 0;
   position: absolute;
   top: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   /* for tooltip */
   color: var(--neutral-900);
@@ -53,4 +67,11 @@
 }
 .lineChartContainer {
   grid-column: 1/-1;
+}
+
+@media (--screen-md-min) {
+  .dashboard {
+    grid-template-columns: 0.75fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }

@@ -7,7 +7,7 @@ export default function PieChart({ data, textColor }) {
       margin={{ top: 45, right: 80, bottom: 80, left: 80 }}
       innerRadius={0.5}
       cornerRadius={4}
-    activeOuterRadiusOffset={8}
+      activeOuterRadiusOffset={8}
       colors={({ data }) => data.bg}
       borderWidth={1}
       borderColor={{
@@ -20,6 +20,7 @@ export default function PieChart({ data, textColor }) {
       arcLinkLabelsColor={{ from: 'color' }}
       arcLabelsSkipAngle={10}
       arcLabelsTextColor={({ data }) => data.text}
+      padAngle={1}
       legends={[
         {
           anchor: 'bottom',

@@ -28,6 +28,19 @@ export function getPieChartData(invoices) {
     }
   );
 
+  console.log(
+    Object.keys(Filters).map(key => {
+      const filterValue = Filters[key];
+      const filterColors = colors[filterValue];
+      return {
+        id: filterValue,
+        label: filterValue,
+        ...filterColors,
+        value: filterCount[filterValue],
+      };
+    })
+  );
+
   return Object.keys(Filters).map(key => {
     const filterValue = Filters[key];
     const filterColors = colors[filterValue];

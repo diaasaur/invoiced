@@ -7,7 +7,7 @@ export default function LineChart({ data, colors: { text, crossHair, grid } }) {
       // curve="cardinal"
       enableArea={true}
       colors={['#9277ff']}
-      margin={{ top: 55, right: 50, bottom: 40, left: 80 }}
+      margin={{ top: 55, right: 20, bottom: 40, left: 50 }}
       xScale={{ type: 'point' }}
       yScale={{
         type: 'linear',
