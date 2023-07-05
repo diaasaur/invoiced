@@ -10,10 +10,11 @@ export function Trigger({ children, ...rest }) {
 export function Content({ children, ...rest }) {
   return (
     <Dialog.Portal>
-      <Dialog.Overlay className={styles.overlay} />
-      <Dialog.Content className={styles.content} {...rest}>
-        {children}
-      </Dialog.Content>
+      <Dialog.Overlay className={styles.overlay}>
+        <Dialog.Content className={styles.content} {...rest}>
+          {children}
+        </Dialog.Content>
+      </Dialog.Overlay>
     </Dialog.Portal>
   );
 }
