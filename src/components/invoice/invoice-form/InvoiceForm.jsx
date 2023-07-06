@@ -54,7 +54,6 @@ export default function InvoiceForm({ mode, invoiceId }) {
       ...defaultValues,
       ...(invoice || {}),
     },
-    shouldUnregister: true,
   });
 
   const { fields, append, remove } = useFieldArray({
@@ -65,21 +64,23 @@ export default function InvoiceForm({ mode, invoiceId }) {
     },
   });
 
-  const onSubmit = () => {
-    calcTotal();
-    const data = getValues();
+  const onSubmit = _data => {
+    const total = getTotal();
+    const data = { ..._data, total, status: Filters.PENDING };
     isEditMode ? updateInvoice(data) : addInvoice(data);
     setOpen(false);
   };
 
-  const calcTotal = () => {
-    const items = getValues('items');
-    const total = items.reduce(
-      (sum, item) => sum + (item.quantity || 0) * (item.price || 0),
+  const handleDraftSave = () => {
+    const total = getTotal();
+    addInvoice({ ...getValues(), total });
+  };
+
+  const getTotal = () =>
+    getValues('items').reduce(
+      (total, item) => total + Number(item.total) || 0,
       0
     );
-    setValue('total', total);
-  };
 
   useEffect(() => {
     if (!open) {
@@ -397,9 +398,7 @@ export default function InvoiceForm({ mode, invoiceId }) {
                       <Button
                         variant="dark"
                         type="button"
-                        onClick={() => {
-                          addInvoice(getValues());
-                        }}
+                        onClick={handleDraftSave}
                       >
                         Save as Draft
                       </Button>
